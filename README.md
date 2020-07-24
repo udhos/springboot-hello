@@ -34,6 +34,14 @@ Spring Boot version: 2.3.1
 
 7. Now run the application again, it will run forever
 
+Look at this line:
+
+```
+2020-07-24 03:09:10.780  INFO 10132 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+```
+
+Open http://localhost:8080/
+
 8. Run from cmd line:
 
 ```
