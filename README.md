@@ -42,6 +42,25 @@ Spring Boot version: 2.3.1
 
 More information about mvnw.cmd: https://github.com/takari/maven-wrapper
 
+9. Look at file DemoApplication.java
+
+See: [Using the @SpringBootApplication Annotation](https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot.html#using-boot-using-springbootapplication-annotation)
+
+    ‪//springboot-hello\quickstart1\src\main\java\com\example\quickstart1\DemoApplication.java
+
+    package com.example.quickstart1;
+
+    import org.springframework.boot.SpringApplication;
+    import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+    @SpringBootApplication // same as @Configuration @EnableAutoConfiguration @ComponentScan
+    public class DemoApplication {
+
+        public static void main(String[] args) {
+            SpringApplication.run(DemoApplication.class, args);
+        }
+
+    }
 
 ## Spring Framework Tutorial | Full Course
 
