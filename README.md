@@ -36,9 +36,11 @@ Spring Boot version: 2.3.1
 
 8. Run from cmd line:
 
-    set JAVA_HOME=C:\Program Files\RedHat\java-11-openjdk-11.0.7-1
-    .\mvnw.cmd clean install
-    java -jar target\quickstart1-0.0.1-SNAPSHOT.jar
+```
+set JAVA_HOME=C:\Program Files\RedHat\java-11-openjdk-11.0.7-1
+.\mvnw.cmd clean install
+java -jar target\quickstart1-0.0.1-SNAPSHOT.jar
+```
 
 More information about mvnw.cmd: https://github.com/takari/maven-wrapper
 
