@@ -171,7 +171,7 @@ Run the application, then open http://localhost:8080/hello
     }
 ```
 
-Run the application, then open http://localhost:8080/hello
+Run the application, then open http://localhost:8080/topics
 
 ## Spring Framework Tutorial | Full Course
 
