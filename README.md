@@ -214,13 +214,13 @@ Run the application, then open http://localhost:8080/topics
     @RestController
     public class TopicController {
 
-    @Autowired // marks field as requiring dependency injection
-    private TopicService topicService;
+        @Autowired // marks field as requiring dependency injection
+        private TopicService topicService;
 
-    @RequestMapping("/topics")
-    public List<Topic> getAllTopics() {
-        return topicService.getAllTopics();
-    }
+        @RequestMapping("/topics")
+        public List<Topic> getAllTopics() {
+            return topicService.getAllTopics();
+        }
     }
 ```
 
