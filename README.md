@@ -94,7 +94,7 @@ See: [Using the @SpringBootApplication Annotation](https://docs.spring.io/spring
     }
 ```
 
-Run the application the open http://localhost:8080/hello
+Run the application, then open http://localhost:8080/hello
 
 ## Spring Framework Tutorial | Full Course
 
