@@ -16,10 +16,10 @@ https://spring.io/tools
 
 4. VSCode: Ctrl+Shift+P: Spring Initializr: Generate a Maven Project
 
-Language: Java
-Group Id: com.example
-Artifact Id: quickstart1
-Spring Boot version: 2.3.1
+* Language: Java
+* Group Id: com.example
+* Artifact Id: quickstart1
+* Spring Boot version: 2.3.1
 
 5. Run the application, it will run to completion and then exit
 
