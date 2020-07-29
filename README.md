@@ -4,6 +4,8 @@
 
 https://www.youtube.com/watch?v=msXL2oDexqw&list=PLqq-6Pq4lTTbx8p2oCgcAQGQyqN8XeA1x
 
+Hint: Alt+Shift+O = organize code (include Java imports).
+
 1. Install OpenJDK 11
 
 https://developers.redhat.com/products/openjdk/download
