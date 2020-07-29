@@ -77,9 +77,9 @@ See: [Using the @SpringBootApplication Annotation](https://docs.spring.io/spring
 10. Create controller HelloController.java
 
 ```
-    ‪//springboot-hello\quickstart1\src\main\java\com\example\quickstart1\HelloController.java
+    ‪//springboot-hello\quickstart1\src\main\java\com\example\quickstart1\hello\HelloController.java
 
-    package com.example.quickstart1;
+    package com.example.quickstart1.hello;
 
     import org.springframework.web.bind.annotation.RequestMapping;
     import org.springframework.web.bind.annotation.RestController;
@@ -91,6 +91,83 @@ See: [Using the @SpringBootApplication Annotation](https://docs.spring.io/spring
         public String sayHi() {
             return "Hi";
         }
+    }
+```
+
+Run the application, then open http://localhost:8080/hello
+
+11. Create TopicController.java and Topic.java
+
+```
+    ‪//springboot-hello\quickstart1\src\main\java\com\example\quickstart1\topic\TopicController.java
+
+    package com.example.quickstart1.topic;
+
+    import java.util.Arrays;
+    import java.util.List;
+
+    import org.springframework.web.bind.annotation.RequestMapping;
+    import org.springframework.web.bind.annotation.RestController;
+
+    @RestController
+    public class TopicController {
+        
+        @RequestMapping("/topics")
+        public List<Topic> getAllTopics() {
+            return Arrays.asList(
+                new Topic("spring", "Spring Framework", "Spring Framework Description"),
+                new Topic("java", "Core Java", "Core Java Description"),
+                new Topic("javascript", "JavaScript", "JavaScript Description")
+            );
+        }
+    }
+```
+
+```
+    ‪//springboot-hello\quickstart1\src\main\java\com\example\quickstart1\topic\Topic.java
+
+    package com.example.quickstart1.topic;
+
+    public class Topic {
+        
+        private String id;
+        private String name;
+        private String description;
+
+        public Topic() {
+        }
+
+        public Topic(String id, String name, String description) {
+            super();
+            this.id = id;
+            this.name = name;
+            this.description = description;
+        }
+
+        public String getId() {
+            return this.id;
+        }
+
+        public void setId(String id) {
+            this.id = id;
+        }
+
+        public String getName() {
+            return this.name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getDescription() {
+            return this.description;
+        }
+
+        public void setDescription(String description) {
+            this.description = description;
+        }
+
     }
 ```
 
