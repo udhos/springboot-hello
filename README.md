@@ -72,6 +72,26 @@ See: [Using the @SpringBootApplication Annotation](https://docs.spring.io/spring
 
     }
 
+10. Create controller HelloController.java
+
+    ‪//springboot-hello\quickstart1\src\main\java\com\example\quickstart1\HelloController.java
+
+    package com.example.quickstart1;
+
+    import org.springframework.web.bind.annotation.RequestMapping;
+    import org.springframework.web.bind.annotation.RestController;
+
+    @RestController // This class is a rest controller
+    public class HelloController {
+        
+        @RequestMapping("/hello") // Map all http methods for method /hello
+        public String sayHi() {
+            return "Hi";
+        }
+    }
+
+Run the application the open http://localhost:8080/hello
+
 ## Spring Framework Tutorial | Full Course
 
 https://www.youtube.com/watch?v=If1Lw4pLLEo
