@@ -173,6 +173,60 @@ Run the application, then open http://localhost:8080/hello
 
 Run the application, then open http://localhost:8080/topics
 
+12. Create TopicService.java and change TopicController.java
+
+```
+    ‪//springboot-hello\quickstart1\src\main\java\com\example\quickstart1\topic\TopicService.java
+
+    package com.example.quickstart1.topic;
+
+    import java.util.Arrays;
+    import java.util.List;
+
+    import org.springframework.stereotype.Service;
+
+    @Service // Spring Business Service (singleton)
+    public class TopicService {
+
+        private List<Topic> topics = Arrays.asList(
+            new Topic("spring", "Spring Framework", "Spring Framework Description"),
+            new Topic("java", "Core Java", "Core Java Description"),
+            new Topic("javascript", "JavaScript", "JavaScript Description")
+        );
+
+        public List<Topic> getAllTopics() {
+            return topics;
+        }
+    }
+```
+
+```
+    ‪//springboot-hello\quickstart1\src\main\java\com\example\quickstart1\topic\TopicController.java
+
+    package com.example.quickstart1.topic;
+
+    import java.util.List;
+
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.web.bind.annotation.RequestMapping;
+    import org.springframework.web.bind.annotation.RestController;
+
+    @RestController
+    public class TopicController {
+
+    @Autowired // marks field as requiring dependency injection
+    private TopicService topicService;
+
+    @RequestMapping("/topics")
+    public List<Topic> getAllTopics() {
+        return topicService.getAllTopics();
+    }
+    }
+```
+
+Run the application, then open http://localhost:8080/topics
+
+
 ## Spring Framework Tutorial | Full Course
 
 https://www.youtube.com/watch?v=If1Lw4pLLEo
